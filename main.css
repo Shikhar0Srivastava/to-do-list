@@ -1,0 +1,155 @@
+:root{
+    --dark: #5C8374;
+    --darker: #183D3D;
+    --darkest: #040D12;
+    --light: #93B1A6;
+    --yellow: #FFC436; /*pink*/
+    --green: #96C291;    /*purple*/
+    --pale: #F2ECBE;  /*gray*/
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fira sans', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--dark);
+    color: #FFF5E0;
+}
+
+header{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1{
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--pale);
+    margin-bottom: 1rem;
+}
+
+#task-form{
+    display: flex;
+}
+
+input, button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#inputer{
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size: 1.25rem;
+}
+
+#inputer::placeholder{
+    color: var(--pale);
+}
+#submiter{
+    color: var(--yellow);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--yellow), var(--green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#submiter:hover{
+    opacity: 0.8;
+}
+
+#submiter:active{
+    opacity: 0.6;
+}
+
+main{
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.work-list{
+    padding: 1rem;
+}
+
+.work-list h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--pale);
+    margin-bottom: 1rem;
+}
+
+#acts .act{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#acts .act .content{
+    flex: 1 1 0%;
+}
+
+#acts .act .content .text{
+    color: var(--light);
+    font-size: 1.125 rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#acts .act .content .text:not(:read-only){
+    color: var(--yellow);
+}
+
+#acts .act .actions{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.act .actions button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.act .actions button:hover{
+    opacity: 0.8;
+}
+
+.act .actions button:active{
+    opacity: 0.6;
+}
+
+.act .actions .edit{
+    background-image: linear-gradient(to right, var(--yellow), var(--green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.act .actions .delete{
+    color: crimson;
+}
